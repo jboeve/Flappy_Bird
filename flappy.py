@@ -73,7 +73,6 @@ while running:
 
 
         #make reset and start two seperate key pushes
-
         if event.type == pygame.KEYDOWN and not active:
             if event.key == pygame.K_SPACE:
                 obstacles = [450, 650, 850]
@@ -81,9 +80,6 @@ while running:
                 player_running = True
                 player_x = 50
                 player_y = 300
-        # if event.type == pygame.KEYDOWN and not player_running:
-        #     if event.key == pygame.K_SPACE:
-        #         active = True
 
         #movement player
         if event.type == pygame.KEYDOWN and active and player_running:
@@ -124,12 +120,6 @@ while running:
         player_y -= y_change
         if player_running:
             y_change -= gravity
-    #if player_y > 250:
-        #player_y = 250
-    # if player_y == 500 and y_change < 0:
-    #     y_change = 0
-    # if player_y < -250:
-    #     player_running = False
 
     if player_y > 500:
         player_running = False
